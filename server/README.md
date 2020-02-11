@@ -3,6 +3,12 @@
 ## Installation
 Ensure pip and python is installed
 ```shell
-# Install into machine user app data root folder
-pip install -r ./requirements.txt --user
-```
+
+`````
+install pipenv for dependencies management
+pip install --user pipenv
+make sure the path is added to the system
+
+`````
+install Flask 
+pip install Flaskpip
