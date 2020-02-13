@@ -3,33 +3,44 @@
 ## Installation
 Ensure that pip and python is installed
 
-`````
-install pipenv for dependencies management
+install pipenv for dependencies management. List of dependencies will be listed on Pipfile. Make sure the pipenv path is added to the system.
+```
 pip install --user pipenv
-make sure the path is added to the system
-`````
-install Requests library for HTTP request
-pipenv install requests
-list of dependencies will be listed on Pipfile
+```
 
+install Requests library for HTTP request
+```
+pipenv install requests
+```
+
+install psycopg2 for library to access PostgreSQL Database
+```
+pipenv install psycopg2
+```
+
+install python-dotenv to add environment variables into the app 
+```
+pip install python-dotenv
+```
 
 ## Authentication for Twitter
-Create an account folloed by an app
-https://developer.twitter.com/en/account/get-started
-`````
+Create an account followed by application creation  on Twitter Developer Account. More information can be found in https://developer.twitter.com/en/account/get-started
 Get your application tokens at "Keys and Access Tokens"
-consumer key, consumer secret key, access token, access token secret 
-`````
-Use get_bearer_token.py to get Bearer Token 
+- consumer key
+- consumer secret key 
+- access token
+- access token secret 
+
+Beare Token can be generated from get_bearer_token.py  
 Bearer Token is required to use the Request lib for Twitter API
-`````
 
-`````
 ## Fetch Data from API 
-Insert the Bearer Token into worker.py
-`````
+- Insert the Bearer Token into worker.py
+- Insert params for the Twitter API
+Info about the endpoint of Twitter API https://developer.twitter.com/en/docs/tweets/search/api-reference/get-search-tweets#
 
-Insert params for the Twitter API
-Info about the endpoint of Twitter API 
-https://developer.twitter.com/en/docs/tweets/search/api-reference/get-search-tweets#
-When the response status is 200, JSON formatted data will be returned 
+## Environment variables set up
+- Create a .env file and input the variables 
+- Call dotenv library and os to get the desired variables 
+
+
