@@ -11,7 +11,7 @@ DB_PORT = os.getenv('DB_PORT')
 USERNAME = os.getenv('USERNAME')
 PASSWORD = os.getenv('PASSWORD')
 
-class DatabaseCon :
+class DatabaseConnection:
     def __init__(self) :
         try :
             #connect to postgres server
