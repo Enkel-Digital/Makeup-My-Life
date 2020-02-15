@@ -1,26 +1,32 @@
 # Worker
 
 ## Installation
+
 Ensure that pip and python is installed
 
 install pipenv for dependencies management. List of dependencies will be listed on Pipfile. Make sure the pipenv path is added to the system.
-```
+```sh
 pip install --user pipenv
 ```
 
 install Requests library for HTTP request
-```
+```sh
 pipenv install requests
 ```
 
 install psycopg2 for library to access PostgreSQL Database
-```
+```sh
 pipenv install psycopg2
 ```
 
 install python-dotenv to add environment variables into the app 
+```sh
+pipenv install python-dotenv
 ```
-pip install python-dotenv
+
+install SQLAlchemy for ORM database
+```sh
+pipenv install SQLAlchemy
 ```
 
 ## Authentication for Twitter
@@ -49,5 +55,10 @@ Info about the endpoint of Twitter API https://developer.twitter.com/en/docs/twe
 - use INSERT query to insert data each time it is fetched
 - commit and close connection and its cursor
 
+## ORM with SQLAlchemy setup and usage
+SQLAlchemy is an Object-Relation Mapper that interact with database with Python programming language 
+- set up the engine and connection with the URL (with params to Postgres)
+- keep all database information into Metadata object 
+- query with Python languange. More info can be found here https://docs.sqlalchemy.org/en/13/core/tutorial.html#connecting
 
 
