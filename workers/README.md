@@ -31,7 +31,7 @@ Get your application tokens at "Keys and Access Tokens"
 - access token
 - access token secret 
 
-Beare Token can be generated from get_bearer_token.py  
+Bearer Token can be generated from get_bearer_token.py  
 Bearer Token is required to use the Request lib for Twitter API
 
 ## Fetch Data from API 
@@ -42,5 +42,12 @@ Info about the endpoint of Twitter API https://developer.twitter.com/en/docs/twe
 ## Environment variables set up
 - Create a .env file and input the variables 
 - Call dotenv library and os to get the desired variables 
+
+## Connect to PostgreSQL server and queries
+- start postgres server with psql -U <user> <database_name>
+- insert all the params to psycopg2.connect 
+- use INSERT query to insert data each time it is fetched
+- commit and close connection and its cursor
+
 
 
