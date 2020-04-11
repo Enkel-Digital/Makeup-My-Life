@@ -50,7 +50,7 @@ class DatabaseConnection:
 
         if search_resp.status_code == 200 :
 
-            #convert text into a data object (dictionary) for Python 
+            #convert text into a data object (dictionary) for Python    
             tweet_data = search_resp.json()
 
             #Get data from Twitter API

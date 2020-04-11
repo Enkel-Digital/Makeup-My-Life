@@ -48,6 +48,27 @@ Info about the endpoint of Twitter API https://developer.twitter.com/en/docs/twe
 ## Environment variables set up
 - Create a .env file and input the variables 
 - Call dotenv library and os to get the desired variables 
+variables description :
+1.  BEARER_TOKEN
+    Token that consist of all kinds of character.
+    OAuth 2.0 generated from Account Token and Account Token Secret from Twitter developer page, Once these two tokens are available, use get_bearer_token.py to generate Bearer Token for the account
+2.  ACC_TOKEN 
+    Token that consist of all kinds of character.
+    This token can be generated after user create an account and a new aplication in the developer page.
+3.  ACC_TOKEN_SECRET
+    Token that consist of all kinds of character.
+    This token can be generated after user create an account and a new aplication in the developer page.
+4.  USERNAME
+    consist of string/int that the user created in PostgreSQL
+5.  PASSWORD
+    consist of string/int that the user created in PostgreSQL
+6.  DB_NAME
+    consist of string/int that the user created in PostgreSQL
+7.  DB_PORT and DB_HOST
+    default value in PostgreSQL are DB_PORT = 5432 , DB_HOST = localhost
+8.  DATABASE_URL_ADDON 
+    an URL for ORM endpoint of PostgreSQL that consist of 
+    USERNAME:PASSWORD@HOST:PORT/DATABASE_NAME
 
 ## Connect to PostgreSQL server and queries
 - start postgres server with psql -U <user> <database_name>

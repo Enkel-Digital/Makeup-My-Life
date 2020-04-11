@@ -29,7 +29,7 @@ def twitter_conn() :
     search_params = {
         'q': 'Makeup',
         'result_type': 'recent',
-        'count': 3
+        'count': 10
     }
 
     #Send request to Twitter API
@@ -40,6 +40,7 @@ def twitter_conn() :
 def data_get_and_insert(search_resp, metadata, tweets, connection) :
 
     id = None
+    print(search_resp.status_code)
     if search_resp.status_code == 200 :
 
         #convert text into a data object (dictionary) for Python 
@@ -50,14 +51,14 @@ def data_get_and_insert(search_resp, metadata, tweets, connection) :
             text = tweet['text']
             time = tweet['created_at']
             name = tweet['user']['screen_name']
-            print('FIRST DATA' , text +'\n'+ time +'\n'+ name )
+            print('FIRST DATA' , text +'\n'+ time +'\n'+ name + '\n')
 
             #ORM query 
             query = tweets.insert().values(name = name , text = text , time = time).returning(tweets.c.id)
             result = connection.execute(query)
 
     else :
-        print('Result for' , search_url , 'is unsuccesful')
+        print('Request unsuccesful')
 
 if __name__ == '__main__':
     orm_config()
